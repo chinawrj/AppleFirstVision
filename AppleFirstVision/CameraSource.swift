@@ -5,6 +5,8 @@ final class CameraSource: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate
     private let session = AVCaptureSession()
     private let queue = DispatchQueue(label: "camera.capture")
     private let context = CIContext()
+    private var rotationCoordinator: AVCaptureDevice.RotationCoordinator?
+    private var rotationObservation: NSKeyValueObservation?
     var onFrame: ((CGImage) -> Void)?
     var onError: ((String) -> Void)?
     func start() {
@@ -27,8 +29,17 @@ final class CameraSource: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate
                         output.setSampleBufferDelegate(self, queue: self.queue)
                         guard self.session.canAddOutput(output) else { return }
                         self.session.addOutput(output)
-                        if let connection = output.connection(with: .video), connection.isVideoRotationAngleSupported(90) {
-                            connection.videoRotationAngle = 90
+                        if let connection = output.connection(with: .video) {
+                            let coordinator = AVCaptureDevice.RotationCoordinator(device: device, previewLayer: nil)
+                            self.rotationCoordinator = coordinator
+                            self.rotationObservation = coordinator.observe(\.videoRotationAngleForHorizonLevelCapture, options: [.initial, .new]) { [weak self] coordinator, _ in
+                                let angle = coordinator.videoRotationAngleForHorizonLevelCapture
+                                self?.queue.async {
+                                    if connection.isVideoRotationAngleSupported(angle) {
+                                        connection.videoRotationAngle = angle
+                                    }
+                                }
+                            }
                         }
                     }
                     self.session.startRunning()

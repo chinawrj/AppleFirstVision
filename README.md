@@ -37,11 +37,13 @@ scripts/run_simulator.sh
 
 ## iPhone 17 Pro Max
 
-最低 iOS 18，已按 arm64 iPhone 目标设计，支持 iPhone 17 Pro Max / iOS 26。竖屏捕获，后置广角，不依赖特定镜头数量。
+最低 iOS 18，已按 arm64 iPhone 目标设计，支持 iPhone 17 Pro Max / iOS 26。界面采用竖屏布局，后置广角捕获通过 Apple RotationCoordinator 根据重力自动校正方向，不依赖特定镜头数量。
 
-打开 `AppleFirstVision.xcodeproj`，在 Signing & Capabilities 选择自己的 Team，连接并解锁 iPhone、启用 Developer Mode，选中设备运行。允许摄像头后直接开始检测。
+打开 `AppleFirstVision.xcodeproj`，在 Signing & Capabilities 选择自己的 Team，连接并解锁 iPhone、启用 Developer Mode，选中设备运行。允许摄像头后直接开始检测。个人开发证书首次安装可能需要在「设置 → 通用 → VPN 与设备管理」信任开发者。
 
-未签名真机目标构建只能验证编译兼容性，不能代替真机摄像头、ANE 性能、发热和耗电测试。当前设备连接状态及实测结果见 `docs/VALIDATION.md`。X 精度优先，持续实时使用可按实际耗时选择 M 或 S。
+也可使用 `DEVICE_ID=<iPhone UDID> DEVELOPMENT_TEAM=<Team ID> scripts/run_device.sh` 自动构建、安装并启动。
+
+已在接入的 iPhone 17 Pro Max（iOS 26.6.1）上完成安装、三档模型推理、实时摄像头切档和暂停恢复测试。详细结果见 `docs/VALIDATION.md`。持续发热和耗电仍需长时间真机测量。X 精度优先，持续实时使用可按实际耗时选择 M 或 S。
 
 ## 自动化验证
 
@@ -53,7 +55,7 @@ xcodebuild -project AppleFirstVision.xcodeproj -scheme AppleFirstVision \
   build CODE_SIGNING_ALLOWED=NO
 ```
 
-测试包括输出契约检查、坐标映射、非法数值与类别过滤、边界裁剪、三档真实模型识别公交车／行人、UI 启动与暂停恢复。UI 测试使用明确标注的 `--fixture` 输入，与实时摄像头验收分开。`artifacts/*.xcresult` 包含完整测试结果。
+测试包括输出契约检查、坐标映射、非法数值与类别过滤、边界裁剪、三档真实模型识别公交车／行人、UI 启动与暂停恢复。确定性 UI 测试使用明确标注的 `--fixture` 输入；另一个 UI 用例使用真实摄像头，模拟器无桥接时跳过，真机使用本机摄像头。`artifacts/*.xcresult` 包含完整测试结果。
 
 GitHub Actions 配置已提供；没有配置远程仓库时不会在云端执行。模型导出需要 macOS 和网络，CI 模拟器按 runner 实际可用机型选择。
 

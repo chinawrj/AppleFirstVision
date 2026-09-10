@@ -22,13 +22,13 @@ final class LaunchTests: XCTestCase {
             app.buttons[button].tap()
             expectation(for: NSPredicate(format: "label CONTAINS %@", model), evaluatedWith: status)
             waitForExpectations(timeout: 60)
-            print("LIVE_MODEL \(model): \(status.label)")
+            print("LIVE_MODEL \(model): \(status.label) latency=\(app.staticTexts.allElementsBoundByIndex.map(\.label).filter { $0.hasSuffix(" ms") })")
         }
         app.buttons["M · Balanced"].tap()
         expectation(for: NSPredicate(format: "label CONTAINS %@", "yolo26m"), evaluatedWith: status)
         waitForExpectations(timeout: 60)
         let attachment = XCTAttachment(screenshot: app.screenshot())
-        attachment.name = "Live Mac camera with YOLO26m detection"
+        attachment.name = "Live camera with YOLO26m detection"
         attachment.lifetime = .keepAlways
         add(attachment)
     }
