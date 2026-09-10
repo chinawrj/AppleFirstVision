@@ -1,0 +1,10 @@
+.venv/
+.build/
+build/
+.DS_Store
+*.xcuserstate
+xcuserdata/
+*.pt
+*.mlpackage/
+*.mlmodelc/
+artifacts/

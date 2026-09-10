@@ -1,0 +1,30 @@
+name: iOS Core ML validation
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  test:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: brew install xcodegen
+      - run: pip install -r scripts/requirements-lock.txt
+      - uses: actions/cache@v4
+        with:
+          path: |
+            AppleFirstVision/Models/*.mlpackage
+            artifacts/weights
+          key: yolo26-fp16-${{ hashFiles('scripts/export_models.py', 'scripts/requirements-lock.txt') }}
+      - run: python scripts/export_models.py
+      - name: Select available iPhone simulator
+        run: |
+          DEVICE=$(xcrun simctl list devices available -j | python -c 'import json,sys; print(next(d["name"] for ds in json.load(sys.stdin)["devices"].values() for d in ds if d["name"].startswith("iPhone")))')
+          echo "SIMULATOR_NAME=$DEVICE" >> "$GITHUB_ENV"
+      - run: scripts/test.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: artifacts/*.xcresult

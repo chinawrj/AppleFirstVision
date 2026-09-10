@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11AFAB96C86A2B528DF416B4 /* yolo26m.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = D1609B35BAF7BDD73FAE14ED /* yolo26m.mlpackage */; };
+		2423E66933201D39F4D2C382 /* yolo26x.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = CFFF49A8923135EBB54340AB /* yolo26x.mlpackage */; };
+		4FAD34175C76E59C41AE9682 /* yolo26m.json in Resources */ = {isa = PBXBuildFile; fileRef = 502C25BB2893E532214E8BF7 /* yolo26m.json */; };
+		781101DD7D2A2071BE040496 /* AppleFirstVisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C28B8F896DAE8CD3A5D0F /* AppleFirstVisionApp.swift */; };
+		80F665BE36B648FEE80AE64F /* yolo26s.json in Resources */ = {isa = PBXBuildFile; fileRef = C50B07E6CA1B7F2E96A6B3F4 /* yolo26s.json */; };
+		855F8255D585BFB5FA330AFB /* Detection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E94CF64831695E8CC8908D /* Detection.swift */; };
+		86DB1CEA27780191BA74DFAC /* labels.json in Resources */ = {isa = PBXBuildFile; fileRef = 17BA8A7E6BD31029A9F0BE9F /* labels.json */; };
+		8DAA438085A13E768D5D482A /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA9124F5599BD2FF2B8AA0 /* Detector.swift */; };
+		8FCEB7B8782CD93174DA9EEA /* DetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA791B15D82D4EF01E510BBF /* DetectionTests.swift */; };
+		973BCEC8AD1E3596830A9AAF /* bus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80C3C18FEDCFF523512379A5 /* bus.jpg */; };
+		9899334843FEF2BB920F1D7A /* yolo26s.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA75E123AEDB4E3300F5A3 /* yolo26s.mlpackage */; };
+		98F7355FDF635C88FF5EB03C /* CameraSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A42C205929D8EC360DD14F /* CameraSource.swift */; };
+		AFD707220394D2B87F7199BD /* VisionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11366930A79F76A9EC5FD3F7 /* VisionStore.swift */; };
+		B6D4D11EA3EC45AC376C0D97 /* yolo26x.json in Resources */ = {isa = PBXBuildFile; fileRef = 57A1CCF191F63015FC07276B /* yolo26x.json */; };
+		C1DD2929442B624309142BDF /* LaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769A7617B0AA3FC2FFDE83A /* LaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44927037A73AE05DEFE8C777 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B16CE19FD940205AB0992DDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7DE93C749B2A410BE03585B;
+			remoteInfo = AppleFirstVision;
+		};
+		7638C878A10FE188BDD75C3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B16CE19FD940205AB0992DDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7DE93C749B2A410BE03585B;
+			remoteInfo = AppleFirstVision;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05DA9124F5599BD2FF2B8AA0 /* Detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
+		0A8C28B8F896DAE8CD3A5D0F /* AppleFirstVisionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFirstVisionApp.swift; sourceTree = "<group>"; };
+		11366930A79F76A9EC5FD3F7 /* VisionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionStore.swift; sourceTree = "<group>"; };
+		17BA8A7E6BD31029A9F0BE9F /* labels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = labels.json; sourceTree = "<group>"; };
+		328AE60AFD4FD7F65CBC1EE7 /* AppleFirstVisionTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AppleFirstVisionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4769A7617B0AA3FC2FFDE83A /* LaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTests.swift; sourceTree = "<group>"; };
+		49A42C205929D8EC360DD14F /* CameraSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSource.swift; sourceTree = "<group>"; };
+		502C25BB2893E532214E8BF7 /* yolo26m.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = yolo26m.json; sourceTree = "<group>"; };
+		577B368907CBD86737B98D6E /* AppleFirstVisionUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AppleFirstVisionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57A1CCF191F63015FC07276B /* yolo26x.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = yolo26x.json; sourceTree = "<group>"; };
+		66278BA6E1BCFFB27A8B94E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		80C3C18FEDCFF523512379A5 /* bus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bus.jpg; sourceTree = "<group>"; };
+		8ACA75E123AEDB4E3300F5A3 /* yolo26s.mlpackage */ = {isa = PBXFileReference; path = yolo26s.mlpackage; sourceTree = "<group>"; };
+		C50B07E6CA1B7F2E96A6B3F4 /* yolo26s.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = yolo26s.json; sourceTree = "<group>"; };
+		C5E94CF64831695E8CC8908D /* Detection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detection.swift; sourceTree = "<group>"; };
+		CFFF49A8923135EBB54340AB /* yolo26x.mlpackage */ = {isa = PBXFileReference; path = yolo26x.mlpackage; sourceTree = "<group>"; };
+		D1609B35BAF7BDD73FAE14ED /* yolo26m.mlpackage */ = {isa = PBXFileReference; path = yolo26m.mlpackage; sourceTree = "<group>"; };
+		DA791B15D82D4EF01E510BBF /* DetectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionTests.swift; sourceTree = "<group>"; };
+		EEEA073F85FF899D4B5254D8 /* AppleFirstVision.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AppleFirstVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		75CEB4E616E440DF13F278E8 = {
+			isa = PBXGroup;
+			children = (
+				7D949E3B9FCAE87B977CAFA7 /* AppleFirstVision */,
+				D3989CFC96CD48DB3B899F75 /* AppleFirstVisionTests */,
+				CFC05973DE57C0614679226F /* AppleFirstVisionUITests */,
+				DFFC6293CBB2CE332A07E7A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D949E3B9FCAE87B977CAFA7 /* AppleFirstVision */ = {
+			isa = PBXGroup;
+			children = (
+				0A8C28B8F896DAE8CD3A5D0F /* AppleFirstVisionApp.swift */,
+				80C3C18FEDCFF523512379A5 /* bus.jpg */,
+				49A42C205929D8EC360DD14F /* CameraSource.swift */,
+				C5E94CF64831695E8CC8908D /* Detection.swift */,
+				05DA9124F5599BD2FF2B8AA0 /* Detector.swift */,
+				66278BA6E1BCFFB27A8B94E5 /* Info.plist */,
+				17BA8A7E6BD31029A9F0BE9F /* labels.json */,
+				11366930A79F76A9EC5FD3F7 /* VisionStore.swift */,
+				BB74A48CC1752981301C570C /* Models */,
+			);
+			path = AppleFirstVision;
+			sourceTree = "<group>";
+		};
+		BB74A48CC1752981301C570C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				502C25BB2893E532214E8BF7 /* yolo26m.json */,
+				D1609B35BAF7BDD73FAE14ED /* yolo26m.mlpackage */,
+				C50B07E6CA1B7F2E96A6B3F4 /* yolo26s.json */,
+				8ACA75E123AEDB4E3300F5A3 /* yolo26s.mlpackage */,
+				57A1CCF191F63015FC07276B /* yolo26x.json */,
+				CFFF49A8923135EBB54340AB /* yolo26x.mlpackage */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CFC05973DE57C0614679226F /* AppleFirstVisionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4769A7617B0AA3FC2FFDE83A /* LaunchTests.swift */,
+			);
+			path = AppleFirstVisionUITests;
+			sourceTree = "<group>";
+		};
+		D3989CFC96CD48DB3B899F75 /* AppleFirstVisionTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA791B15D82D4EF01E510BBF /* DetectionTests.swift */,
+			);
+			path = AppleFirstVisionTests;
+			sourceTree = "<group>";
+		};
+		DFFC6293CBB2CE332A07E7A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEEA073F85FF899D4B5254D8 /* AppleFirstVision.app */,
+				328AE60AFD4FD7F65CBC1EE7 /* AppleFirstVisionTests.xctest */,
+				577B368907CBD86737B98D6E /* AppleFirstVisionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5539D1AB0A72A919B27E4084 /* AppleFirstVisionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44ADEC773719B1E8BC79928A /* Build configuration list for PBXNativeTarget "AppleFirstVisionTests" */;
+			buildPhases = (
+				CCE720F6BB36F9C2DAF327AA /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C36B4A04024271AD309B52B1 /* PBXTargetDependency */,
+			);
+			name = AppleFirstVisionTests;
+			packageProductDependencies = (
+			);
+			productName = AppleFirstVisionTests;
+			productReference = 328AE60AFD4FD7F65CBC1EE7 /* AppleFirstVisionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D7DE93C749B2A410BE03585B /* AppleFirstVision */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5EE76D213B7F8F50E1E0F65 /* Build configuration list for PBXNativeTarget "AppleFirstVision" */;
+			buildPhases = (
+				96DE507C72531DB37D86AC63 /* Sources */,
+				41BACC59C8D1911CB502161F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppleFirstVision;
+			packageProductDependencies = (
+			);
+			productName = AppleFirstVision;
+			productReference = EEEA073F85FF899D4B5254D8 /* AppleFirstVision.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3245B9FF37A122A797F9DB3 /* AppleFirstVisionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBF293F12FFB9ED7054DF278 /* Build configuration list for PBXNativeTarget "AppleFirstVisionUITests" */;
+			buildPhases = (
+				B16BF2221AB1936F94DD0F49 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D8BE672F9B7562A291FB487 /* PBXTargetDependency */,
+			);
+			name = AppleFirstVisionUITests;
+			packageProductDependencies = (
+			);
+			productName = AppleFirstVisionUITests;
+			productReference = 577B368907CBD86737B98D6E /* AppleFirstVisionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B16CE19FD940205AB0992DDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5539D1AB0A72A919B27E4084 = {
+						ProvisioningStyle = Automatic;
+					};
+					D7DE93C749B2A410BE03585B = {
+						ProvisioningStyle = Automatic;
+					};
+					F3245B9FF37A122A797F9DB3 = {
+						ProvisioningStyle = Automatic;
+						TestTargetID = D7DE93C749B2A410BE03585B;
+					};
+				};
+			};
+			buildConfigurationList = AA56ED85FFF539F6CC0A6E31 /* Build configuration list for PBXProject "AppleFirstVision" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 75CEB4E616E440DF13F278E8;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DFFC6293CBB2CE332A07E7A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7DE93C749B2A410BE03585B /* AppleFirstVision */,
+				5539D1AB0A72A919B27E4084 /* AppleFirstVisionTests */,
+				F3245B9FF37A122A797F9DB3 /* AppleFirstVisionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41BACC59C8D1911CB502161F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				973BCEC8AD1E3596830A9AAF /* bus.jpg in Resources */,
+				86DB1CEA27780191BA74DFAC /* labels.json in Resources */,
+				4FAD34175C76E59C41AE9682 /* yolo26m.json in Resources */,
+				80F665BE36B648FEE80AE64F /* yolo26s.json in Resources */,
+				B6D4D11EA3EC45AC376C0D97 /* yolo26x.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96DE507C72531DB37D86AC63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781101DD7D2A2071BE040496 /* AppleFirstVisionApp.swift in Sources */,
+				98F7355FDF635C88FF5EB03C /* CameraSource.swift in Sources */,
+				855F8255D585BFB5FA330AFB /* Detection.swift in Sources */,
+				8DAA438085A13E768D5D482A /* Detector.swift in Sources */,
+				AFD707220394D2B87F7199BD /* VisionStore.swift in Sources */,
+				11AFAB96C86A2B528DF416B4 /* yolo26m.mlpackage in Sources */,
+				9899334843FEF2BB920F1D7A /* yolo26s.mlpackage in Sources */,
+				2423E66933201D39F4D2C382 /* yolo26x.mlpackage in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B16BF2221AB1936F94DD0F49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1DD2929442B624309142BDF /* LaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE720F6BB36F9C2DAF327AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCEB7B8782CD93174DA9EEA /* DetectionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D8BE672F9B7562A291FB487 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7DE93C749B2A410BE03585B /* AppleFirstVision */;
+			targetProxy = 7638C878A10FE188BDD75C3D /* PBXContainerItemProxy */;
+		};
+		C36B4A04024271AD309B52B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7DE93C749B2A410BE03585B /* AppleFirstVision */;
+			targetProxy = 44927037A73AE05DEFE8C777 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		17B95A95AD24793E994EE1A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleFirstVisionTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppleFirstVision.app/AppleFirstVision";
+			};
+			name = Release;
+		};
+		2638B37650D65BFC3A0297F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleFirstVisionUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AppleFirstVision;
+			};
+			name = Release;
+		};
+		27BF11C0DB8FA3C93635A1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COREML_CODEGEN_LANGUAGE = None;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleFirstVision/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Real-time on-device YOLO26 object detection.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Connect to the local simulator camera bridge.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleFirstVision;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C7803721D0361C2D0958442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleFirstVisionTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppleFirstVision.app/AppleFirstVision";
+			};
+			name = Debug;
+		};
+		3806F43848C7745DD0DBD122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		42DFD111B1443A2758C13087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		933940B8C85B2F4D720302BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleFirstVisionUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AppleFirstVision;
+			};
+			name = Debug;
+		};
+		FA305EE83BED105947D08D81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COREML_CODEGEN_LANGUAGE = None;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleFirstVision/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Real-time on-device YOLO26 object detection.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Connect to the local simulator camera bridge.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleFirstVision;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44ADEC773719B1E8BC79928A /* Build configuration list for PBXNativeTarget "AppleFirstVisionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C7803721D0361C2D0958442 /* Debug */,
+				17B95A95AD24793E994EE1A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AA56ED85FFF539F6CC0A6E31 /* Build configuration list for PBXProject "AppleFirstVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42DFD111B1443A2758C13087 /* Debug */,
+				3806F43848C7745DD0DBD122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EBF293F12FFB9ED7054DF278 /* Build configuration list for PBXNativeTarget "AppleFirstVisionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				933940B8C85B2F4D720302BF /* Debug */,
+				2638B37650D65BFC3A0297F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F5EE76D213B7F8F50E1E0F65 /* Build configuration list for PBXNativeTarget "AppleFirstVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BF11C0DB8FA3C93635A1A8 /* Debug */,
+				FA305EE83BED105947D08D81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B16CE19FD940205AB0992DDA /* Project object */;
+}

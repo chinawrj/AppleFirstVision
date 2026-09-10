@@ -1,0 +1,55 @@
+name: AppleFirstVision
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: '18.0'
+settings:
+  base:
+    SWIFT_VERSION: '5.0'
+    TARGETED_DEVICE_FAMILY: '1,2'
+    CODE_SIGN_STYLE: Automatic
+targets:
+  AppleFirstVision:
+    type: application
+    platform: iOS
+    sources: [AppleFirstVision]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.AppleFirstVision
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_NSCameraUsageDescription: Real-time on-device YOLO26 object detection.
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: Connect to the local simulator camera bridge.
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_UIRequiresFullScreen: YES
+        COREML_CODEGEN_LANGUAGE: None
+    info:
+      path: AppleFirstVision/Info.plist
+      properties:
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+  AppleFirstVisionTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [AppleFirstVisionTests]
+    dependencies:
+      - target: AppleFirstVision
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+  AppleFirstVisionUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [AppleFirstVisionUITests]
+    dependencies:
+      - target: AppleFirstVision
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  AppleFirstVision:
+    build:
+      targets:
+        AppleFirstVision: all
+    test:
+      targets: [AppleFirstVisionTests, AppleFirstVisionUITests]

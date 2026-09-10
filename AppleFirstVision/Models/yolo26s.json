@@ -1,0 +1,13 @@
+{
+  "model": "yolo26s",
+  "ultralytics": "8.4.146",
+  "coremltools": "9.0",
+  "input": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "output": "[1,300,6] xyxy pixels, confidence, class; NMS-free",
+  "weights_sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b"
+}
