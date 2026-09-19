@@ -44,8 +44,12 @@ Fixture cold model load + prediction during final simulator test: S 251 ms, M 37
 
 `project.yml`, generated shared Xcode project, locked Python dependencies, export script, run scripts, tests, and CI workflow are committed. Generated model packages, weights, signing profiles, build outputs, and camera screenshots are excluded from Git.
 
-The GitHub Actions workflow is supplied but has not run remotely. Live camera test skips on CI when no localhost bridge is available; deterministic model inference remains required.
+The original private repository CI completed successfully before publication. Live camera test skips on CI when no localhost bridge is available; deterministic model inference remains required.
 
 Core ML uses `.all` on device, but individual operation placement on the Neural Engine was not profiled.
 
 This implementation performs object detection only (not instance segmentation or pose). Persistent thermal behavior, battery use, camera interruption/recovery under phone calls, and broad device/OS coverage are not yet certified.
+
+## Public release sanitization — 2026-09-19
+
+The public history uses a GitHub noreply identity and generic example bundle identifiers. Machine-specific simulator identifiers were replaced with runtime discovery. Original private history and its CI records remain private. The device measurements above predate the example bundle identifier change; no existing phone installation was modified during publication.

@@ -57,7 +57,7 @@ xcodebuild -project AppleFirstVision.xcodeproj -scheme AppleFirstVision \
 
 测试包括输出契约检查、坐标映射、非法数值与类别过滤、边界裁剪、三档真实模型识别公交车／行人、UI 启动与暂停恢复。确定性 UI 测试使用明确标注的 `--fixture` 输入；另一个 UI 用例使用真实摄像头，模拟器无桥接时跳过，真机使用本机摄像头。`artifacts/*.xcresult` 包含完整测试结果。
 
-GitHub Actions 配置已提供；没有配置远程仓库时不会在云端执行。模型导出需要 macOS 和网络，CI 模拟器按 runner 实际可用机型选择。
+GitHub Actions 已配置，在推送和拉取请求时运行。模型导出需要 macOS 和网络，CI 模拟器按 runner 实际可用机型选择。
 
 ## 来源
 
@@ -67,3 +67,9 @@ GitHub Actions 配置已提供；没有配置远程仓库时不会在云端执�
 - [Apple 摄像头示例与模拟器限制](https://developer.apple.com/documentation/uikit/customizing-an-image-picker-controller)
 
 第三方模型与测试图片的来源及许可见 `THIRD_PARTY_NOTICES.md`。
+
+## 公开版本与隐私
+
+提交身份使用 GitHub noreply 邮箱。启动脚本自动选择可用模拟器，也可通过环境变量指定设备。示例 Bundle ID 使用 `com.example`；真机开发时可改成自己的唯一标识，并选择自己的签名 Team。此前安装到手机的开发版本不受仓库公开影响。
+
+摄像头画面、测试截图、签名材料和本机诊断文件只保存在本地，不应提交或上传。公开 CI 使用 GitHub 托管 runner 与标准测试图片。

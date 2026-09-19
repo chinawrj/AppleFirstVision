@@ -8,3 +8,16 @@ xcuserdata/
 *.mlpackage/
 *.mlmodelc/
 artifacts/
+
+# Local credentials and diagnostic media
+.env
+.env.*
+!.env.example
+*.p12
+*.pfx
+*.pem
+*.key
+*.mobileprovision
+*.xcresult/
+*.log
+screenshots/
